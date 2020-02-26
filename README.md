@@ -11,7 +11,7 @@ Explore US Bikeshare Data
 I use Python to explore data related to bike share systems for three major cities in the United States—Chicago, New York City, and Washington.
 I used pandas,numpy and datetime libraries too.
 I write code to import the data and answer interesting questions about it by computing descriptive statistics.I also write a script that takes in raw input to create an interactive experience in the terminal to present these statistics.
-Users are able to filter the information by city, month and weekday, in order to visualize statistics information related to a specific subset of data.
+Users are able to filter the information by city, month and weekday, in order to visualize statistics information related to a specific subset of data. The experience is interactive. The application offers the user the choice of choosing the desired city, month and weekday.
 
 Questions analysed in project:
 #1 Popular times of travel (i.e., occurs most often in the start time)
