@@ -157,6 +157,14 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # Display total travel time
+    display_trip_duration_stats_informations(df)
+
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
+
+
+def display_trip_duration_stats_informations(df):
+    # Display total travel time
     total_travel_time = datetime.timedelta(
         seconds=int(df['Trip Duration'].sum()))
     print('Total travel time: {}\n'.format(total_travel_time))
@@ -166,9 +174,6 @@ def trip_duration_stats(df):
         seconds=int(df['Trip Duration'].mean()))
     print('Mean travel time: {}\n'.format(mean_travel_time))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
-
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
@@ -176,6 +181,14 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
+    # Display counts of user types
+    display_user_stats_informations(df)
+
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
+
+
+def display_user_stats_informations(df):
     # Display counts of user types
     user_types_counts = df['User Type'].value_counts()
     print('Number of user types : {}\n'.format(user_types_counts))
@@ -197,9 +210,6 @@ def user_stats(df):
         print('Common year of birth: {}\n'.format(common_year_birth))
     except:
         print('No birthday data for this city')
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
 
 
 def main():
